@@ -1,0 +1,30 @@
+import java.util.arraylist;
+import java.util.list;
+import java.util.scanner;
+public class removeduplicate{
+    public static list<integer> removeduplicates(list<integer> list)
+    {
+        list<integer> result=new arraylist<>();
+        for(integer num:list)
+        {
+            if(!result.contains(num))
+                result.add(num);
+        }
+        return result;
+    }
+    public static void main(string[] args)
+    {
+        scanner scanner=new scanner(system.in);
+        system.out.print("enter number of elements:");
+        int n=scanner.nextint();
+        list<integer> numbers=new arraylist<>();
+        for(int i=0;i<n;i++)
+        {
+            system.out.print("enter "+(i+1)+" elements:");
+            numbers.add(scanner.nextint());
+        }
+        list<integer> result=removeduplicates(numbers);
+        system.out.println("list after removing duplicates:"+result);
+        scanner.close();
+    }
+}

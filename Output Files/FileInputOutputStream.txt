@@ -1,0 +1,73 @@
+import java.util.HashMap;
+import java.util.TreeMap;
+import java.util.Map;
+import java.util.LinkedList;
+import java.util.Queue;
+public class BankingSystem {
+	private Map<Integer,Integer> accounts=new HashMap<>();
+	private Queue<Integer> withdrawalRequests=new LinkedList<>();
+	public void addAccount(int accountNumber,int initialBalance)
+	{
+		accounts.put(accountNumber,initialBalance);
+	}
+		
+	public void requestWithdrawal(int accountNumber)
+	{
+		if(accounts.containsKey(accountNumber))
+			withdrawalRequests.offer(accountNumber);
+		else
+			System.out.println("Account "+accountNumber+" not found.");
+	}
+		
+	public void processWithdrawals(int amount)
+	{
+		while(!withdrawalRequests.isEmpty())
+		{
+			int accountNumber=withdrawalRequests.poll();
+			int balance=accounts.get(accountNumber);
+			if(balance>=amount)
+			{
+				accounts.put(accountNumber,balance-amount);
+				System.out.println("Withdrawal of Rs."+amount+" successful for "+accountNumber);
+			}
+			else
+				System.out.println("Insufficient balance for Account "+accountNumber);
+		}
+	}
+	public void displaySortedByBalance()
+	{
+		System.out.println("---Accounts Sorted by Balance---");
+		TreeMap<Integer,Integer> sortedByBalance=new TreeMap<>();
+		for(Map.Entry<Integer,Integer> entry:accounts.entrySet())
+			sortedByBalance.put(entry.getValue(),entry.getKey());
+		for(Map.Entry<Integer,Integer> entry:sortedByBalance.entrySet())
+			System.out.println("Account "+entry.getValue()+" : Balance Rs."+entry.getKey());
+	}
+	
+	public void displayAllAccounts()
+	{
+		System.out.println("---All Accounts---");
+		for(Map.Entry<Integer,Integer> entry:accounts.entrySet())
+			System.out.println("Account "+entry.getKey()+" : Balance Rs."+entry.getValue());
+	}
+	
+	public static void main(String[] args)
+	{
+		BankingSystem bank=new BankingSystem();
+		bank.addAccount(1001,5000);
+		bank.addAccount(1002,3000);
+		bank.addAccount(1003,7000);
+		bank.displayAllAccounts();
+		System.out.println();
+		bank.requestWithdrawal(1001);
+		bank.requestWithdrawal(1002);
+		bank.requestWithdrawal(1004);
+		System.out.println();
+		bank.processWithdrawals(2000);
+		System.out.println();
+		bank.displayAllAccounts();
+		System.out.println();
+		bank.displaySortedByBalance();
+	}
+}
+
