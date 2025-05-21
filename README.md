@@ -11,7 +11,6 @@ Welcome to Week 4 of your Java learning path! This week focuses on Java Generics
   - [Day 4: Exceptions](#day-4-exceptions)
   - [Day 5: Regex & JUnit](#day-5-regex--junit)
   - [Day 6: Java 8 Features](#day-6-java-8-features)
-  - [Practice](#practice)
 - [Prerequisites](#prerequisites)
 - [How to Use This Repository](#how-to-use-this-repository)
 - [Next Steps](#next-steps)
@@ -46,10 +45,6 @@ Use Regular Expressions and write unit tests with the JUnit framework.
 
 Get introduced to Lambda expressions, Stream API, and functional programming.
 
-## Practice
-
-Try out practice problems to reinforce your learning.
-
 ---
 
 ## 🛠️ Prerequisites
@@ -74,4 +69,6 @@ Each day’s folder or branch contains code examples, exercises, and notes for t
 | Day 6   | [Java 8 Features](https://github.com/Sandhiya-1718/Week04-Java-Collections-Streams/tree/Day-6)|
 
 ## ⏭️ Next Steps
+After completing Week 4 - Java Collections and Streams, move forward to Week 5 - IO Programming where you will learn about handling CSV and JSON data, using annotations and reflection, and exploring important design principles to build robust Java applications.
+
 
