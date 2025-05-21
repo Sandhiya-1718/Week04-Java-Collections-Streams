@@ -22,23 +22,43 @@ This week deepens your understanding of Java by exploring collections and stream
 ## 📘 Topics Covered
 
 ### Day 1: Java Generics
-- Learn about type safety, creating generic classes and methods in Java.
+- What are Generics?
+- Creating Generic Classes and Methods
+- Bounded Type Parameters and Wildcards
+- Benefits of Type Safety with Generics
 
 ### Day 2: Collections
-- Explore the Java Collections Framework: Lists, Sets, Maps, and Queues.
-
+- Introduction to Java Collections Framework
+- Lists: ArrayList, LinkedList
+- Sets: HashSet, TreeSet
+- Maps: HashMap, TreeMap
+- Queues and Deques
+- Basic Operations and Iteration
+- 
 ### Day 3: Java IO Streams
-- Understand how to handle input and output streams for file operations.
-
+- Understanding Byte Streams and Character Streams
+- FileInputStream and FileOutputStream
+- BufferedReader and BufferedWriter
+- Reading and Writing Text and Binary Files
+  
 ### Day 4: Exceptions
-- Master exception handling with try-catch blocks and custom exceptions.
+- Types of Exceptions: Checked vs Unchecked
+- Handling Exceptions with try-catch-finally
+- Creating and Throwing Custom Exceptions
+- Best Practices for Exception Handling
 
 ### Day 5: Regex & JUnit
-- Use Regular Expressions and write unit tests with the JUnit framework.
-
+- Basics of Regular Expressions
+- Pattern Matching and Validation
+- Writing Unit Tests using JUnit
+- Annotations and Test Lifecycle in JUnit
+  
 ### Day 6: Java 8 Features
-- Get introduced to Lambda expressions, Stream API, and functional programming.
-
+- Lambda Expressions and Functional Interfaces
+- Stream API for Collection Processing
+- Method References
+- Introduction to Optional and New Date-Time API
+  
 ## 🛠️ Prerequisites
 
 - Completion of Weeks 1-3 Java basics and data structures.
