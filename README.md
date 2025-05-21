@@ -34,7 +34,7 @@ This week deepens your understanding of Java by exploring collections and stream
 - Maps: HashMap, TreeMap
 - Queues and Deques
 - Basic Operations and Iteration
-- 
+  
 ### Day 3: Java IO Streams
 - Understanding Byte Streams and Character Streams
 - FileInputStream and FileOutputStream
